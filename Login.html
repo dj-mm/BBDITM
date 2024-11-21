@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBDITM|Login|</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container to hold everything */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Top Frame */
+        .top-frame {
+            background-color: #da2831;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        /* Logo Styling */
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 20%; /* Makes the logo circular */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #1668db; /* Optional: Adds a border around the circle */
+        }
+
+        .logo h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #f5bd16; /* Color of the logo text */
+        }
+
+        .top-frame .web-name h1 {
+            margin: 0;
+        }
+
+        .top-frame .navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .top-frame .navigation ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Main Content (Left and Right Frames) */
+        .main-content {
+            display: flex;
+            flex: 1;
+        }
+
+        /* Left Frame */
+        .left-frame {
+            width: 200px;
+            background-color: #f0e5d8;
+            padding: 10px;
+        }
+
+        .left-frame ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .left-frame ul li {
+            margin: 10px 0;
+        }
+
+        .left-frame ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        /* Right Frame */
+        .right-frame {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-left: 2px solid #dddddd;
+        }
+
+        .right-frame p {
+            font-size: 18px;
+            color: #555;
+        }
+        /* Footer Styles */
+        footer {
+            
+            background-color: #28dad1;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Pushes the footer to the bottom */
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top Frame -->
+        <div class="top-frame">
+            <div class="logo">
+                <img src="download.png" alt="Logo" style="width: 80%; height: 80%; border-radius: 10%;">
+            </div>
+            <div class="web-name">
+                <h1>Babu Banarasi Das Institute of Technology & Management</h1>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="/Home.html">Home</a></li>
+                    <li><a href="/Login.html">Login</a></li>
+                    <li><a href="/registration.html">Registration</a></li>
+                    <li><a href="/Catalogue.html">Catalogue</a></li>
+                    <li><a href="/Cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content (Left and Right Frames) -->
+        <div class="main-content">
+            <!-- Left Frame (Navigation) -->
+            <div class="left-frame">
+                <ul>
+                    <li><a href="#" onclick="loadPage('CSE')">CSE</a></li>
+                    <li><a href="#" onclick="loadPage('ECE')">ECE</a></li>
+                    <li><a href="#" onclick="loadPage('EEE')">EEE</a></li>
+                    <li><a href="#" onclick="loadPage('CIVIL')">CIVIL</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Frame (Description or Loaded Pages) -->
+            <div class="right-frame" id="right-frame">
+                <p>Login page </p>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <footer>
+                <p><b><a href="https://linktr.ee/manash.djmm" target="_blank" style="text-decoration: none; color:black ">© Developed with love by Manash</a></b></p>
+            </footer>
+            
+        </footer>
+    </div>
+
+    <script>
+        function loadPage(department) {
+            const rightFrame = document.getElementById('right-frame');
+            rightFrame.innerHTML = `<h2>Catalogue for ${department} Books</h2><p>Books related to ${department} department will be listed here.</p>`;
+        }
+    </script>
+</body>
+</html>
